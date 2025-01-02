@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View ,ScrollView} from 'react-native';
 import { PaperProvider,Text } from 'react-native-paper';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -9,6 +10,10 @@ export default function App() {
       <PaperProvider>
         <ScrollView>
           <Header />
+          <Text>
+            
+          </Text>
+          <Footer />
         </ScrollView>
       </PaperProvider>
       <StatusBar style="auto" />
