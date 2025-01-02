@@ -3,13 +3,13 @@ import { PaperProvider } from "react-native-paper"
 
 const {width, height}= Dimensions.get("window");
 export default function Footer(){
-    return(
-        <View style={styles.footer}>
-            <PaperProvider>
-                <Text style={styles.footertext}>UoV @2024</Text>
-            </PaperProvider>
-        </View>
-    )
+    return (
+      <View style={styles.footer}>
+        <PaperProvider>
+          <Text style={styles.footertext}>UoV &copy;2024</Text>
+        </PaperProvider>
+      </View>
+    );
 }
 
 const styles = StyleSheet.create({
