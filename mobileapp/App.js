@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View ,ScrollView} from 'react-native';
+import { StyleSheet, View ,ScrollView,Image,Dimensions} from 'react-native';
 import { PaperProvider,Text } from 'react-native-paper';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+const{width, height}=Dimensions.get("window");
 
 export default function App() {
   return (
@@ -10,9 +12,10 @@ export default function App() {
       <PaperProvider>
         <ScrollView>
           <Header />
-          <Text>
-            
-          </Text>
+            <Image
+              source={require('./assets/uovlogo.png')}
+              style={styles.logo}
+            />
           <Footer />
         </ScrollView>
       </PaperProvider>
@@ -29,4 +32,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 50,
   },
+  logo:{
+    width:width*1,
+    height:110,
+  }
 });
