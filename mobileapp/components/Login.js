@@ -1,6 +1,12 @@
 import { StyleSheet,View } from "react-native"
 import { PaperProvider, Text, TextInput, Button } from "react-native-paper";
+import React, { useState } from "react";
+
+
+
 export default function Login(){
+    const [username, password] = useState("");
+    
     return (
       <View style={styles.login}>
         <PaperProvider>
