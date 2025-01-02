@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   logo: {
     width: width * 1,
     height: 110,
+    marginBottom:40,
   },
   hometext:{
     fontSize: 30,

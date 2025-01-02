@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#8b008b",
     width: width * 1,
     height: 70,
+    marginTop: 260,
   },
   footertext:{
     color: "white",
