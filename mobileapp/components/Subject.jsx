@@ -18,6 +18,10 @@ export default function Subject({ route, navigation }) {
   // Find the course details based on course_id
   const coursedetails = courses.find((course) => course.id === user.course_id);
 
+  const totalMarks = markdetails.reduce((sum, mark) => sum + mark.marks, 0);
+  const subjectCount = markdetails.length;
+  const averageMarks = subjectCount > 0 ? (totalMarks / subjectCount).toFixed(2) : "N/A";
+
   // Pagination state
   const [page, setPage] = React.useState(0);
   const [numberOfItemsPerPageList] = React.useState([2, 3, 4]);
