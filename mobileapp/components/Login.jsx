@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import Footer from "./Footer";
 import React from "react";
 import { useState } from "react";
-import {Student} from "../data/StudentsDb";
+import {students} from "../data/StudentsDb";
 
 
 
@@ -15,7 +15,7 @@ export default function Login({navigation}) {
   const [password, setPassword] = React.useState('');
 
   const handlelogin=()=>{
-    const user = Student.find(
+    const user = students.find(
       student=>student.username === username && student.password === password
     )
     if(user){
