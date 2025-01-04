@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     width:"100%",
     height:50,
     padding:0,
-    marginTop:207,
+    marginTop:186,
   },
   footertext:{
     color:"white",
