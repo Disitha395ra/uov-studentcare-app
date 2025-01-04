@@ -4,7 +4,7 @@ import {courses} from "../data/StudentsDb";
 import Header from "./Header";
 import Logo from "./Logo";
 import Buttonpannel from "./Buttonpannel";
-export default function Course({route}) {
+export default function Course({route,navigation}) {
 
   const { user } = route.params;
   const coursedetails = courses.find(
@@ -27,6 +27,7 @@ export default function Course({route}) {
                   <Text style={styles.coursecontentdetails}>Duration : {coursedetails.duration}</Text>
                   <Text style={styles.coursecontentdetails}>Discription : {coursedetails.description}</Text>
                 </View>
+                <Buttonpannel navigation={navigation} route={route} />
             </View>
         </ScrollView>
     </PaperProvider>
@@ -78,8 +79,8 @@ const styles = StyleSheet.create({
       marginTop: 50,
       borderWidth: 1, 
       borderColor: "black", 
-      padding: 10, 
+      padding: 35, 
       borderRadius: 15,
-      paddingBottom: 40,
+      paddingBottom: 90,
     }
 });
