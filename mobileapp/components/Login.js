@@ -1,7 +1,8 @@
-import { StyleSheet,View } from "react-native"
+import { StyleSheet,View,Image } from "react-native"
 import { PaperProvider, Text, TextInput, Button } from "react-native-paper";
 import React, { useState } from "react";
-
+import Header from "./Header";
+import Footer from "./Footer";
 
 
 export default function Login(){
@@ -10,6 +11,9 @@ export default function Login(){
     return (
       <View style={styles.login}>
         <PaperProvider>
+          <Header />
+          <Image source={require("../assets/uovlogo.png")} style={styles.logo} />
+          <Text style={styles.hometext}>Student Login</Text>
           <TextInput
             mode="outlined"
             label="Enter username"
@@ -31,6 +35,7 @@ export default function Login(){
           >
             Login Here
           </Button>
+          <Footer />
         </PaperProvider>
       </View>
     );
