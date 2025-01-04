@@ -9,8 +9,7 @@ export default function Subject({route,navigation}) {
 
   const {user} = route.params;
   const subjectdetails = subjects.find(course => user.course_id === course.id);
-
-  
+  const markdetails = marks.find(mark => user.id === mark.student_id);
 
   return (
     <PaperProvider>
