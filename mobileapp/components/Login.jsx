@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     textAlign: "center",
-    paddingTop: 40,
+    paddingTop: 60,
     paddingBottom:20,
   },
   TextInput:{
