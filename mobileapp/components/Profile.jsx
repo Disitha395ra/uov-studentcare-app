@@ -1,4 +1,5 @@
 import { StyleSheet, View, ScrollView, Image, Dimensions } from "react-native";
+import { PaperProvider, Text } from "react-native-paper";
 export default function Profile() {
   return (
     <View style={styles.container}>

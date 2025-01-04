@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import React from "react";
 
 
-export default function Login() {
+export default function Login({navigation}) {
 
   const [text, setText] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -30,7 +30,7 @@ export default function Login() {
             onChangeText={password => setText(password)}
             style={styles.TextInput}
           />
-          <Button icon="arrow-right-circle" mode="contained" onPress={() => console.log('Pressed')}
+          <Button icon="arrow-right-circle" mode="contained" onPress={() =>navigation.navigate("Profile") }
             style={styles.loginbutton}>
             Login Here 
           </Button>
