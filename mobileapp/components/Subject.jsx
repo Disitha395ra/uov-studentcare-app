@@ -2,11 +2,11 @@ import { StyleSheet, View, ScrollView } from "react-native";
 import { PaperProvider, Text, DataTable } from "react-native-paper";
 import Header from "./Header";
 import Logo from "./Logo";
-import { subjects, marks, courses } from "../data/StudentsDb"; // Importing data from StudentsDb.js
+import { subjects, marks, courses } from "../data/StudentsDb"; 
 import React from "react";
 
 export default function Subject({ route, navigation }) {
-  const { user } = route.params; // Extract user from route parameters
+  const { user } = route.params; 
 
   // Find the subject details based on course_id and user.course_id
   const subjectdetails = subjects.find((subject) => subject.course_id === user.course_id);
@@ -22,13 +22,7 @@ export default function Subject({ route, navigation }) {
   const [numberOfItemsPerPageList] = React.useState([2, 3, 4]);
   const [itemsPerPage, onItemsPerPageChange] = React.useState(numberOfItemsPerPageList[0]);
 
-  // Example items for DataTable (can be replaced by actual mark details)
-  const [items] = React.useState([
-    { key: 1, name: "Cupcake", calories: 356, fat: 16 },
-    { key: 2, name: "Eclair", calories: 262, fat: 16 },
-    { key: 3, name: "Frozen yogurt", calories: 159, fat: 6 },
-    { key: 4, name: "Gingerbread", calories: 305, fat: 3.7 },
-  ]);
+  const items = markdetails;
 
   const from = page * itemsPerPage;
   const to = Math.min((page + 1) * itemsPerPage, items.length);
@@ -53,12 +47,8 @@ export default function Subject({ route, navigation }) {
           </View>
 
           <View style={styles.course}>
-            <Text style={styles.coursecontent}>
-              {subjectdetails ? subjectdetails.name : "Subject not found"}
-            </Text>
-          </View>
-
-          <View style={styles.subjectmarkstable}>
+            <Text style={styles.markscontent}>Marks Information</Text>
+            <View style={styles.subjectmarkstable}>
             <DataTable>
               <DataTable.Header>
                 <DataTable.Title>Subject</DataTable.Title>
@@ -87,6 +77,9 @@ export default function Subject({ route, navigation }) {
               />
             </DataTable>
           </View>
+          </View>
+
+          
         </View>
       </ScrollView>
     </PaperProvider>
@@ -111,4 +104,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   subjectmarkstable: {},
+  markscontent:{
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "black",
+    marginTop: 20,
+    textAlign: "left",
+  }
 });
