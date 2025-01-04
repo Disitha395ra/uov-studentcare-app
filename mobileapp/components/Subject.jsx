@@ -49,6 +49,9 @@ export default function Subject({ route, navigation }) {
             <Text style={styles.coursecontent}>
               {coursedetails ? coursedetails.name : "Course not found"}
             </Text>
+            <Text style={styles.subjectmarksdetails}>
+              Average Marks: {averageMarks} | Subjects: {subjectCount}
+            </Text>
           </View>
 
           <View style={styles.course}>
@@ -115,5 +118,12 @@ const styles = StyleSheet.create({
     color: "black",
     marginTop: 20,
     textAlign: "left",
+  },
+  subjectmarksdetails:{
+    fontSize: 14,
+    //fontWeight: "bold",
+    color: "black",
+    marginTop: 20,
+    textAlign: "center",
   }
 });
