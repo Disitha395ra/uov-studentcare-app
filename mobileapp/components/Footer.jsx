@@ -5,7 +5,7 @@ export default function Footer() {
     <PaperProvider>
       <ScrollView>
         <View style={styles.footer}>
-          <Text>footer</Text>
+          <Text style={styles.footertext}>UoV &copy; 2024</Text>
         </View>
       </ScrollView>
     </PaperProvider>
@@ -13,5 +13,16 @@ export default function Footer() {
 }
 
 const styles = StyleSheet.create({
-  footer: {},
+  footer: {
+    backgroundColor:"#8b008b",
+    width:"100%",
+    height:50,
+  },
+  footertext:{
+    color:"white",
+    fontSize:20,
+    fontWeight:"bold",
+    textAlign:"center",
+    paddingTop:10,
+  }
 });
