@@ -25,10 +25,6 @@ export default function Login({navigation}) {
     }
   }
 
-
-
-
-
   return (
     <PaperProvider>
       <ScrollView>

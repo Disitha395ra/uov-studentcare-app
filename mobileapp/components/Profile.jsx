@@ -1,5 +1,7 @@
 import { StyleSheet, View, ScrollView, Image, Dimensions } from "react-native";
 import { PaperProvider, Text,Divider } from "react-native-paper";
+import Logo from "./Logo";
+import Footer from "./Footer";
 export default function Profile({route}) {
 
   const { user } = route.params;
@@ -7,6 +9,7 @@ export default function Profile({route}) {
   return (
     <PaperProvider>
       <ScrollView>
+        <Logo/>
           <View style={styles.container}>
               <Image
                 source={user.profile_pic}
@@ -69,6 +72,7 @@ const styles = StyleSheet.create({
     color: "black",
     marginTop: 10,
     textAlign: "left",
-    width: "100%"
+    width: "100%",
+    //marginBottom:-10,
   }
 });
