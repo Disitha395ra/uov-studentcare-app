@@ -5,12 +5,14 @@ import Logo from "./Logo";
 import {subjects} from "../data/StudentsDb";
 import {marks} from "../data/StudentsDb";
 
-export default function Subject() {
+export default function Subject({route,navigation}) {
 
-  const {user} = route.params;
+  //const {user} = route.params;
+  const {course} = route.params;
+  
 
   const subjectdetails = subjects.find(
-    
+    subject=>subject.course_id  === course.id
   )
 
   return (
@@ -21,7 +23,7 @@ export default function Subject() {
                 <Header/>
                 <Logo/>
               </View>
-                <Text>subject</Text>
+                <Text>{subjectdetails.name}</Text>
             </View>
         </ScrollView>
     </PaperProvider>
