@@ -3,6 +3,7 @@ import { PaperProvider, Text,Divider } from "react-native-paper";
 import Logo from "./Logo";
 import Footer from "./Footer";
 import Buttonpannel from "./Buttonpannel";
+import Header from "./Header";
 export default function Profile({route}) {
 
   const { user } = route.params;
@@ -10,6 +11,7 @@ export default function Profile({route}) {
   return (
     <PaperProvider>
       <ScrollView>
+        <Header/>
         <Logo/>
           <View style={styles.container}>
               <Image
@@ -28,7 +30,9 @@ export default function Profile({route}) {
               <Text style={styles.contactdetails}>Gender : {user.gender}</Text>
               <Text style={styles.contactdetails}>Age : {user.age}</Text>
               <Text style={styles.contactdetails}>Blood-Group : {user.blood_group}</Text>
+              <Divider style={styles.divider}/>
               <Buttonpannel/>
+              
           </View>
       </ScrollView>
     </PaperProvider>
