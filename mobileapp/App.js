@@ -19,6 +19,8 @@ export default function App() {
           <Stack.Navigator initialRouteName="Login">
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Profile" component={Profile} />
+            <Stack.Screen name="Course" component={Course} />
+            <Stack.Screen name="Subject" component={Subject} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
