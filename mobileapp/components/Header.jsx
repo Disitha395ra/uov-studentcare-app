@@ -5,7 +5,7 @@ export default function Header() {
     <PaperProvider>
         <ScrollView>
             <View style={styles.header}>
-                <Text>Header</Text>
+                <Text style={styles.headertext}>UoV Student Care</Text>
             </View>
         </ScrollView>
     </PaperProvider>
@@ -14,6 +14,16 @@ export default function Header() {
 
 const styles = StyleSheet.create({
     header: {
-        
+        backgroundColor:"#8b008b",
+        alignItems:"center", 
+        width:"100%",
+        height:50,
+        //fontWeight:"bold",
     },
+    headertext:{
+        color:"white",
+        fontSize:20,
+        fontWeight:"bold",
+        paddingTop:10,
+    }
 });
