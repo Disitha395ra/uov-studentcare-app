@@ -5,6 +5,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import Course from "./components/Course.jsx";
+import Subject from "./components/Subject.jsx";
+
 
 const Stack = createStackNavigator();
 
