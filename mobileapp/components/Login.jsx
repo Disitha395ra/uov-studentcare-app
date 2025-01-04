@@ -8,8 +8,13 @@ import React from "react";
 
 export default function Login({navigation}) {
 
-  const [text, setText] = React.useState('');
+  const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
+
+  
+
+
+
 
   return (
     <PaperProvider>
@@ -20,15 +25,16 @@ export default function Login({navigation}) {
           <Text style={styles.logintext}>Student Login</Text>
           <TextInput
             label="Username"
-            value={text}
-            onChangeText={text => setText(text)}
+            value={username}
+            onChangeText={text => setUsername(text)}
             style={styles.TextInput}
           />
           <TextInput
             label="password"
             value={password}
-            onChangeText={password => setText(password)}
+            onChangeText={text => setPassword(text)}
             style={styles.TextInput}
+            secureTextEntry
           />
           <Button icon="arrow-right-circle" mode="contained" onPress={() =>navigation.navigate("Profile") }
             style={styles.loginbutton}>
