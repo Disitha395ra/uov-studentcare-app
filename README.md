@@ -34,3 +34,9 @@ src/
 ├── data/
 │   └── StudentsDb.js
 ├── App.js
+
+## Screen Shots
+![3](https://github.com/user-attachments/assets/4b52f9c2-61a7-4893-bd48-46cadf0f2fdf)
+![4](https://github.com/user-attachments/assets/c29a3c26-afe9-48f5-b66b-384dbda6616d)
+![1](https://github.com/user-attachments/assets/1fe306a8-edf2-412d-b01b-6130d842a985)
+![2](https://github.com/user-attachments/assets/22c4164a-a7de-4813-8717-abe3a139d77d)
