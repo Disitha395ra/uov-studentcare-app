@@ -7,13 +7,10 @@ import {marks} from "../data/StudentsDb";
 
 export default function Subject({route,navigation}) {
 
-  //const {user} = route.params;
-  const {course} = route.params;
-  
+  const {user} = route.params;
+  const subjectdetails = subjects.find(course => user.course_id === course.id);
 
-  const subjectdetails = subjects.find(
-    subject=>subject.course_id  === course.id
-  )
+  
 
   return (
     <PaperProvider>
