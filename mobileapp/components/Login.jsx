@@ -5,7 +5,7 @@ import Logo from "./Logo";
 import Footer from "./Footer";
 import React from "react";
 import { useState } from "react";
-import {data} from "../data/StudentsDb";
+import {Student} from "../data/StudentsDb";
 
 
 
@@ -14,7 +14,17 @@ export default function Login({navigation}) {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  
+  const handlelogin=()=>{
+    const user = Student.find(
+      student=>student.username === username && student.password === password
+    )
+    if(user){
+      navigation.navigate("Profile",{user})
+    }else{
+      alert("Invalid username or password")
+    }
+  }
+
 
 
 
@@ -39,7 +49,7 @@ export default function Login({navigation}) {
             style={styles.TextInput}
             secureTextEntry
           />
-          <Button icon="arrow-right-circle" mode="contained" onPress={() =>navigation.navigate("Profile") }
+          <Button icon="arrow-right-circle" mode="contained" onPress={handlelogin}
             style={styles.loginbutton}>
             Login Here 
           </Button>
