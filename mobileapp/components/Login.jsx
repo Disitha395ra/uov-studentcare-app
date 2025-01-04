@@ -1,6 +1,7 @@
 import { StyleSheet, View, ScrollView } from "react-native";
 import { PaperProvider, Text } from "react-native-paper";
 import Header from "./Header";
+import Logo from "./Logo";
 import Footer from "./Footer";
 
 
@@ -10,7 +11,8 @@ export default function Login() {
       <ScrollView>
         <View style={styles.login}>
           <Header />
-          <Text>Login</Text>
+          <Logo />
+          <Text style={styles.logintext}>Login</Text>
           <Footer />
         </View>
       </ScrollView>
@@ -19,5 +21,9 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
-  login: {},
+  logintext: {
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+  }
 });
