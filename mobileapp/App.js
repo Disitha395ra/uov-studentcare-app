@@ -21,7 +21,7 @@ export default function App() {
           <Stack.Screen
             name="Dashboard"
             component={Buttonpannel}
-            options={{ title: "Dashboard" }}
+            //options={{ title: "Dashboard" }}
           />
         </Stack.Navigator>
       </NavigationContainer>

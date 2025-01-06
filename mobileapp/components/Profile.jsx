@@ -14,11 +14,7 @@ export default function Profile({ route }) {
         <Logo />
         <View style={styles.container}>
           <Image
-            source={
-              typeof user.profile_pic === "number"
-                ? user.profile_pic
-                : { uri: user.profile_pic }
-            }
+            source={user.profile_pic}
             style={styles.profilepic}
           />
           <Text style={styles.username}>{user.name}</Text>
