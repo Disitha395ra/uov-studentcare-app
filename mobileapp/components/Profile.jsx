@@ -1,40 +1,45 @@
 import { StyleSheet, View, ScrollView, Image, Dimensions } from "react-native";
-import { PaperProvider, Text,Divider } from "react-native-paper";
+import { PaperProvider, Text, Divider } from "react-native-paper";
 import Logo from "./Logo";
 import Footer from "./Footer";
 import Header from "./Header";
-export default function Profile({navigation,route}) {
 
+export default function Profile({ route }) {
   const { user } = route.params;
 
   return (
     <PaperProvider>
       <ScrollView>
-        <Header/>
-        <Logo/>
-          <View style={styles.container}>
-              <Image
-                source={user.profile_pic}
-                style={styles.profilepic}
-              >
-              </Image>
-              <Text style={styles.username}>{user.name}</Text>
-              <Text>Age : {user.age} | gender : {user.gender}</Text>
-              <Divider style={styles.divider}/>
-              <Text style={styles.contacthead}>Contact Information</Text>
-              <Text style={styles.contactdetails}>Email : {user.email}</Text>
-              <Text style={styles.contactdetails}>Phone : {user.phone}</Text>
-              <Text style={styles.contactdetails}>Address : {user.address}</Text>
-              <Text style={styles.contacthead}>Biological Information</Text>
-              <Text style={styles.contactdetails}>Gender : {user.gender}</Text>
-              <Text style={styles.contactdetails}>Age : {user.age}</Text>
-              <Text style={styles.contactdetails}>Blood-Group : {user.blood_group}</Text>
-              <Divider style={styles.divider}/>
-              
-          </View>
+        <Header />
+        <Logo />
+        <View style={styles.container}>
+          <Image
+            source={
+              typeof user.profile_pic === "number"
+                ? user.profile_pic
+                : { uri: user.profile_pic }
+            }
+            style={styles.profilepic}
+          />
+          <Text style={styles.username}>{user.name}</Text>
+          <Text>
+            Age: {user.age} | Gender: {user.gender}
+          </Text>
+          <Divider style={styles.divider} />
+          <Text style={styles.contacthead}>Contact Information</Text>
+          <Text style={styles.contactdetails}>Email: {user.email}</Text>
+          <Text style={styles.contactdetails}>Phone: {user.phone}</Text>
+          <Text style={styles.contactdetails}>Address: {user.address}</Text>
+          <Text style={styles.contacthead}>Biological Information</Text>
+          <Text style={styles.contactdetails}>Gender: {user.gender}</Text>
+          <Text style={styles.contactdetails}>Age: {user.age}</Text>
+          <Text style={styles.contactdetails}>
+            Blood Group: {user.blood_group}
+          </Text>
+          <Divider style={styles.divider} />
+        </View>
       </ScrollView>
     </PaperProvider>
-    
   );
 }
 
@@ -46,37 +51,35 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 50,
   },
-  profilepic:{
+  profilepic: {
     width: 230,
     height: 230,
-    alignItems:"Top",
   },
-  username:{
+  username: {
     fontSize: 35,
     fontWeight: "bold",
     color: "black",
     marginTop: 20,
   },
-  divider:{
-    height:2,
-    backgroundColor:"black",
-    width:"100%",
+  divider: {
+    height: 2,
+    backgroundColor: "black",
+    width: "100%",
     marginTop: 20,
   },
-  contacthead:{
+  contacthead: {
     fontSize: 20,
     fontWeight: "bold",
     color: "black",
     marginTop: 20,
     textAlign: "left",
-    width: "100%"
+    width: "100%",
   },
-  contactdetails:{
+  contactdetails: {
     fontSize: 15,
     color: "black",
     marginTop: 10,
     textAlign: "left",
     width: "100%",
-    //marginBottom:-10,
-  }
+  },
 });

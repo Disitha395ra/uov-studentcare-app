@@ -14,16 +14,17 @@ export default function Login({navigation}) {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const handlelogin=()=>{
-    const user = students.find(
-      student=>student.username === username && student.password === password
-    )
-    if(user){
-      navigation.navigate("Profile",{user})
-    }else{
-      alert("Invalid username or password")
-    }
+  const handlelogin = () => {
+  const user = students.find(
+    (student) => student.username === username && student.password === password
+  );
+  if (user) {
+    navigation.navigate("Dashboard", { user }); // Navigate to Buttonpannel with user data
+  } else {
+    alert("Invalid username or password");
   }
+};
+
 
   return (
     <PaperProvider>
