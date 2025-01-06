@@ -7,6 +7,8 @@ import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Course from "./components/Course.jsx";
 import Subject from "./components/Subject.jsx";
+import BottomNavigation from "react-native-paper";
+import Buttonpannel from "./components/Buttonpannel.jsx";
 
 
 const Stack = createStackNavigator();
@@ -21,6 +23,7 @@ export default function App() {
             <Stack.Screen name="Profile" component={Profile} />
             <Stack.Screen name="Course" component={Course} />
             <Stack.Screen name="Subject" component={Subject} />
+            <Buttonpannel/>
           </Stack.Navigator>
         </NavigationContainer>
       </View>

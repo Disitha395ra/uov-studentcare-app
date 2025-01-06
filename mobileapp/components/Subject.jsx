@@ -3,7 +3,6 @@ import { PaperProvider, Text, DataTable } from "react-native-paper";
 import Header from "./Header";
 import Logo from "./Logo";
 import { subjects, marks, courses } from "../data/StudentsDb"; 
-import Buttonpannel from "./Buttonpannel";
 import React from "react";
 
 export default function Subject({ route, navigation }) {
@@ -61,8 +60,6 @@ export default function Subject({ route, navigation }) {
             </DataTable>
           </View>
           </View>
-
-          <Buttonpannel navigation={navigation} route={route} />
         </View>
       </ScrollView>
     </PaperProvider>

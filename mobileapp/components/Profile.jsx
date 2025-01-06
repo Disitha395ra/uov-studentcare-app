@@ -2,7 +2,6 @@ import { StyleSheet, View, ScrollView, Image, Dimensions } from "react-native";
 import { PaperProvider, Text,Divider } from "react-native-paper";
 import Logo from "./Logo";
 import Footer from "./Footer";
-import Buttonpannel from "./Buttonpannel";
 import Header from "./Header";
 export default function Profile({navigation,route}) {
 
@@ -31,7 +30,6 @@ export default function Profile({navigation,route}) {
               <Text style={styles.contactdetails}>Age : {user.age}</Text>
               <Text style={styles.contactdetails}>Blood-Group : {user.blood_group}</Text>
               <Divider style={styles.divider}/>
-              <Buttonpannel navigation={navigation} route={route} />
               
           </View>
       </ScrollView>

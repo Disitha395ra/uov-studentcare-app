@@ -3,7 +3,6 @@ import { PaperProvider, Text } from "react-native-paper";
 import {courses} from "../data/StudentsDb";
 import Header from "./Header";
 import Logo from "./Logo";
-import Buttonpannel from "./Buttonpannel";
 export default function Course({route,navigation}) {
 
   const { user } = route.params;
@@ -27,7 +26,6 @@ export default function Course({route,navigation}) {
                   <Text style={styles.coursecontentdetails}>Duration : {coursedetails.duration}</Text>
                   <Text style={styles.coursecontentdetails}>Discription : {coursedetails.description}</Text>
                 </View>
-                <Buttonpannel navigation={navigation} route={route} />
             </View>
         </ScrollView>
     </PaperProvider>
