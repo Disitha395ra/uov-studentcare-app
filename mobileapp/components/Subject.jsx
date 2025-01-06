@@ -22,19 +22,6 @@ export default function Subject({ route, navigation }) {
   const subjectCount = markdetails.length;
   const averageMarks = subjectCount > 0 ? (totalMarks / subjectCount).toFixed(2) : "N/A";
 
-  // Pagination state
-  const [page, setPage] = React.useState(0);
-  const [numberOfItemsPerPageList] = React.useState([2, 3, 4]);
-  const [itemsPerPage, onItemsPerPageChange] = React.useState(numberOfItemsPerPageList[0]);
-
-  const items = markdetails;
-
-  const from = page * itemsPerPage;
-  const to = Math.min((page + 1) * itemsPerPage, items.length);
-
-  React.useEffect(() => {
-    setPage(0);
-  }, [itemsPerPage]);
 
   return (
     <PaperProvider>
@@ -71,18 +58,6 @@ export default function Subject({ route, navigation }) {
                   <DataTable.Cell numeric>{mark.marks}</DataTable.Cell>
                 </DataTable.Row>
               ))}
-
-              <DataTable.Pagination
-                page={page}
-                numberOfPages={Math.ceil(items.length / itemsPerPage)}
-                onPageChange={(page) => setPage(page)}
-                label={`${from + 1}-${to} of ${items.length}`}
-                numberOfItemsPerPageList={numberOfItemsPerPageList}
-                numberOfItemsPerPage={itemsPerPage}
-                onItemsPerPageChange={onItemsPerPageChange}
-                showFastPaginationControls
-                selectPageDropdownLabel={"Rows per page"}
-              />
             </DataTable>
           </View>
           </View>
